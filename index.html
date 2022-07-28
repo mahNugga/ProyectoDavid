@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    
+        <head>
+            <title>El verdadero rincon del vago</title>
+            <link rel="stylesheet" type="text/css" href="./berracos/css/enchulado.css"/>
+        </head>    
+    <body>
+        <header>
+            blah blahy aqui va la cabecera y los botones
+
+            <ul>
+                <li>
+                    <a href="#">Inicio</a>
+                </li>
+                <li>
+                    <a href="file:///K:/Xampp7/htdocs/gordoMeco/tips.html"> para ser un groso copiando</a>    
+                </li>
+                <li>
+                    <a href="file:///K:/Xampp7/htdocs/gordoMeco/integrantes.html">Integrantes grupo 2</a>
+                </li>
+                <li>
+                    <a href="file:///K:/Xampp7/htdocs/gordoMeco/acolita.html">Unete al Blog</a>
+                </li>
+                <li>
+                    <a href="file:///K:/Xampp7/htdocs/gordoMeco/peluca.html">porque el peluca sapeeeeee!</a> 
+                </li>
+            </ul>
+        </header>
+
+        <div class="contenedor">
+            <div class="contenido">
+               <div class="flex-container">
+                <div class="spinner">
+                    <p>
+                        <div class="cube1"></div>
+                        <div class="cube2"></div>
+                    </p>
+                </div>
+                <div class="flex-slide home">
+                    <div class="flex-title flex-title-home">Casa</div>
+                    <div class="flex-about flex-about-home"><p>La casa de pepito</p></div>
+                </div> 
+                
+                <div class="flex-slide about">
+                    <div class="flex-title">Yo</div>
+                    <div class="flex-about">
+                        <p>Soy un estudiante de la Universidad de Guayaquil apasionado por el
+                            anime y el regueton
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex-slide work">
+                    <div class="flex-title">Trabajo</div>
+                    <div class="flex-about">
+                        <p>
+                            Listado de trabajos mas relevantes:
+                        </p>
+                        <ul>
+                            <li>Ayudante en corporacion el rosado</li>
+                            <li>Cosplayer semi profesional</li>
+                            <li>Guardia de seguridad en Hunter</li>
+                        </ul>
+                    </div>
+                </div>
+                
+               </div>
+
+
+                
+            </div>
+
+        </div>
+        
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/jquery.waitforimages.min.js"></script>
+    <script>
+        (function(){
+            $(".flex-container").waitForImages(
+                function(){
+                    $(".spinner").fadeOut();
+                },$.noop,true
+            );
+            $(".flex-slide").each(function(){
+                $(this).hover(
+                    function(){
+                        $(this).find("flex-title").css({
+                            transform:"rotate(0deg)",
+                            top:"10%"
+                        });
+                        $(this).find(".flex-about").css({
+                            opacity:"1",
+                        });
+                    },
+                    function(){
+                        $(this).find(".flex-title").css({
+                            transform:"rotate(90deg)",
+                            top:"15%",
+                        });
+                        $(this).find(".flex-about").css({
+                            opacity:"0",
+                        });
+                    }
+                );
+            });
+        })();
+    </script>
+</html>
